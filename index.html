@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+      integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <title>IP Address Tracker</title>
+  </head>
+  <body>
+    <main>
+      <section class="primary">
+        <img
+          src="./images/pattern-bg.png"
+          alt="background pattern"
+          class="primary__bg"
+        />
+        <h1>IP Address Tracker</h1>
+        <div class="inputs">
+          <input
+            type="text"
+            placeholder="Search for any IP address or domain"
+          />
+          <button><img src="./images/icon-arrow.svg" alt="arrow" /></button>
+        </div>
+
+        <div class="datas">
+          <div>
+            <p class="title">IP ADDRESS</p>
+            <p class="fetch"><strong>-</strong></p>
+          </div>
+
+          <div>
+            <p class="title">LOCATION</p>
+            <p class="fetch"><strong>-</strong></p>
+          </div>
+
+          <div>
+            <p class="title">TIMEZONE</p>
+            <p class="fetch"><strong>-</strong></p>
+          </div>
+
+          <div>
+            <p class="title">ISP</p>
+            <p class="fetch"><strong>-</strong></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="map"></section>
+
+      <script src="./index.js"></script>
+    </main>
+  </body>
+</html>
