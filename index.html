@@ -33,40 +33,47 @@
           class="primary__bg"
         />
         <h1>IP Address Tracker</h1>
-        <div class="inputs">
+        <form class="inputs">
           <input
-            type="text"
+            type="search"
             placeholder="Search for any IP address or domain"
+            id="ip-input"
+            autofocus
           />
           <button><img src="./images/icon-arrow.svg" alt="arrow" /></button>
-        </div>
+        </form>
 
         <div class="datas">
-          <div>
+          <div class="datas__box">
             <p class="title">IP ADDRESS</p>
-            <p class="fetch"><strong>-</strong></p>
+            <p class="fetch"><strong id="ip">-</strong></p>
           </div>
 
-          <div>
+          <div class="datas__divider"></div>
+
+          <div class="datas__box">
             <p class="title">LOCATION</p>
-            <p class="fetch"><strong>-</strong></p>
+            <p class="fetch"><strong id="locate">-</strong></p>
           </div>
 
-          <div>
+          <div class="datas__divider"></div>
+
+          <div class="datas__box">
             <p class="title">TIMEZONE</p>
-            <p class="fetch"><strong>-</strong></p>
+            <p class="fetch"><strong id="timezone">-</strong></p>
           </div>
 
-          <div>
+          <div class="datas__divider"></div>
+
+          <div class="datas__box">
             <p class="title">ISP</p>
-            <p class="fetch"><strong>-</strong></p>
+            <p class="fetch"><strong id="isp">-</strong></p>
           </div>
         </div>
       </section>
 
       <section id="map"></section>
-
-      <script src="./index.js"></script>
     </main>
+    <script src="./api.js"></script>
   </body>
 </html>

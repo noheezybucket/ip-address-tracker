@@ -83,7 +83,7 @@ $secondary: hsl(0, 0%, 59%);
   background-color: white;
   padding: 0 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   height: 65%;
   z-index: 999;
@@ -93,23 +93,32 @@ $secondary: hsl(0, 0%, 59%);
   width: 100%;
   //   text-align: center;
 
-  div {
+  &__box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+    width: 25%;
+  }
+
+  &__divider {
+    height: 70px;
+    background: $secondary;
+    padding: 0.5px;
   }
 }
 
 .title {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 0.8em;
   color: $secondary;
 }
 
 .fetch {
-  font-size: 1.2em;
-  text-align: center;
+  font-size: 1.5em;
+  strong {
+    font-weight: 500;
+  }
 }
 
 #map {
