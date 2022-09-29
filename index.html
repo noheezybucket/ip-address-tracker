@@ -35,39 +35,40 @@
         <h1>IP Address Tracker</h1>
         <form class="inputs">
           <input
-            type="search"
+            type="text"
             placeholder="Search for any IP address or domain"
             id="ip-input"
             autofocus
           />
           <button><img src="./images/icon-arrow.svg" alt="arrow" /></button>
         </form>
+        <p id="error"></p>
 
         <div class="datas">
           <div class="datas__box">
             <p class="title">IP ADDRESS</p>
-            <p class="fetch"><strong id="ip">-</strong></p>
+            <p class="fetch"><strong id="ip">N/A</strong></p>
           </div>
 
           <div class="datas__divider"></div>
 
           <div class="datas__box">
             <p class="title">LOCATION</p>
-            <p class="fetch"><strong id="locate">-</strong></p>
+            <p class="fetch"><strong id="locate">N/A</strong></p>
           </div>
 
           <div class="datas__divider"></div>
 
           <div class="datas__box">
             <p class="title">TIMEZONE</p>
-            <p class="fetch"><strong id="timezone">-</strong></p>
+            <p class="fetch"><strong id="timezone">N/A</strong></p>
           </div>
 
           <div class="datas__divider"></div>
 
           <div class="datas__box">
             <p class="title">ISP</p>
-            <p class="fetch"><strong id="isp">-</strong></p>
+            <p class="fetch"><strong id="isp">N/A</strong></p>
           </div>
         </div>
       </section>

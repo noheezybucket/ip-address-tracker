@@ -25,6 +25,7 @@ body {
   font-weight: 500;
   margin-bottom: 20px;
   color: white;
+  text-align: center;
 }
 .primary__bg {
   position: absolute;
@@ -91,9 +92,9 @@ body {
   z-index: 999;
   max-width: 900px;
   gap: 30px;
-  width: 100%;
+  width: 90%;
 }
-@media screen and (max-width: 934px) {
+@media screen and (max-width: 606px) {
   .datas {
     flex-direction: column;
     height: auto;
@@ -116,7 +117,7 @@ body {
   background: hsl(0deg, 0%, 59%);
   padding: 0.5px;
 }
-@media screen and (max-width: 934px) {
+@media screen and (max-width: 606px) {
   .datas__divider {
     display: none;
   }
@@ -148,6 +149,13 @@ body {
 
 #map {
   height: 63vh;
+}
+
+#error {
+  color: hsl(0deg, 100%, 63%);
+  margin-top: 10px;
+  text-align: center;
+  width: 90%;
 }
 
 /*# sourceMappingURL=style.css.map */

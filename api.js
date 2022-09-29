@@ -26,10 +26,12 @@ const domainRegx =
 ipAddressInput.addEventListener("input", (e) => {
   if (ipRegx.test(e.target.value)) {
     ipAddress = e.target.value;
+    error.textContent = "";
   }
 
   if (domainRegx.test(e.target.value)) {
     domain = e.target.value;
+    error.textContent = "";
   }
 });
 
@@ -37,8 +39,9 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   if (ipAddress === "" && domain === "") {
-    alert("Enter a valid IP address or domain name!");
+    error.textContent = "Invalid IP address or domain name.";
   } else {
+    error.textContent = "";
     findIP();
   }
 
