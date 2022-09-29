@@ -16,14 +16,34 @@ let marker;
 // ip input
 let ipAddress = "";
 let domain = "";
+
+// regx
+const ipRegx =
+  /(\b25[0-5]|\b2[0-4][0-9]|\b[01]?[0-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}/g;
+const domainRegx =
+  /(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]/g;
+
 ipAddressInput.addEventListener("input", (e) => {
-  ipAddress = e.target.value;
-  domain = e.target.value;
+  if (ipRegx.test(e.target.value)) {
+    ipAddress = e.target.value;
+  }
+
+  if (domainRegx.test(e.target.value)) {
+    domain = e.target.value;
+  }
 });
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  findIP();
+
+  if (ipAddress === "" && domain === "") {
+    alert("Enter a valid IP address or domain name!");
+  } else {
+    findIP();
+  }
+
+  ipAddress = "";
+  domain = "";
 });
 
 const findIP = () => {
@@ -41,7 +61,11 @@ const findIP = () => {
       marker = L.marker([data.location.lat, data.location.lng]).addTo(map);
       marker.bindPopup(`${data.isp} - ${data.ip}`).openPopup();
     })
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      // console.log(err);
+      ip.textContent = "N/A";
+      locate.textContent = "N/A";
+      isp.textContent = "N/A";
+      timezone.textContent = "N/A";
+    });
 };
-
-console.log(ipAddress, domain);

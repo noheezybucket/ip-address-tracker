@@ -40,6 +40,11 @@ body {
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width: 934px) {
+  .inputs {
+    width: 80%;
+  }
+}
 .inputs input {
   padding: 13px 10px;
   font-size: 1.1em;
@@ -50,8 +55,15 @@ body {
   border: none;
   outline: none;
 }
+@media screen and (max-width: 934px) {
+  .inputs input {
+    width: 100%;
+    font-size: 1em;
+  }
+}
 .inputs button {
   width: 4%;
+  min-width: 40px;
   border: none;
   background-color: hsl(0deg, 0%, 17%);
   border-top-right-radius: 0.7em;
@@ -77,21 +89,37 @@ body {
   align-items: center;
   height: 65%;
   z-index: 999;
-  max-width: 850px;
+  max-width: 900px;
   gap: 30px;
   width: 100%;
+}
+@media screen and (max-width: 934px) {
+  .datas {
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    width: 80%;
+    padding: 20px;
+    bottom: -170px;
+    gap: 10px;
+  }
 }
 .datas__box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 10px;
-  width: 25%;
+  max-width: 225px;
 }
 .datas__divider {
   height: 70px;
   background: hsl(0deg, 0%, 59%);
   padding: 0.5px;
+}
+@media screen and (max-width: 934px) {
+  .datas__divider {
+    display: none;
+  }
 }
 
 .title {
@@ -99,12 +127,23 @@ body {
   font-size: 0.8em;
   color: hsl(0deg, 0%, 59%);
 }
+@media screen and (max-width: 934px) {
+  .title {
+    text-align: center;
+  }
+}
 
 .fetch {
   font-size: 1.5em;
 }
 .fetch strong {
   font-weight: 500;
+}
+@media screen and (max-width: 934px) {
+  .fetch {
+    text-align: center;
+    font-size: 1em;
+  }
 }
 
 #map {

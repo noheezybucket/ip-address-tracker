@@ -46,6 +46,9 @@ $secondary: hsl(0, 0%, 59%);
   width: 100%;
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 934px) {
+    width: 80%;
+  }
 
   input {
     padding: 13px 10px;
@@ -56,10 +59,15 @@ $secondary: hsl(0, 0%, 59%);
     border-bottom-right-radius: 0;
     border: none;
     outline: none;
+    @media screen and (max-width: 934px) {
+      width: 100%;
+      font-size: 1em;
+    }
   }
 
   button {
     width: 4%;
+    min-width: 40px;
     border: none;
     background-color: $primary;
     border-top-right-radius: 0.7em;
@@ -87,24 +95,35 @@ $secondary: hsl(0, 0%, 59%);
   align-items: center;
   height: 65%;
   z-index: 999;
-  //   height: 130px;
-  max-width: 850px;
+  max-width: 900px;
   gap: 30px;
   width: 100%;
-  //   text-align: center;
+
+  @media screen and (max-width: 934px) {
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    width: 80%;
+    padding: 20px;
+    bottom: -170px;
+    gap: 10px;
+  }
 
   &__box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    width: 25%;
+    max-width: 225px;
   }
 
   &__divider {
     height: 70px;
     background: $secondary;
     padding: 0.5px;
+    @media screen and (max-width: 934px) {
+      display: none;
+    }
   }
 }
 
@@ -112,12 +131,21 @@ $secondary: hsl(0, 0%, 59%);
   font-weight: 700;
   font-size: 0.8em;
   color: $secondary;
+
+  @media screen and (max-width: 934px) {
+    text-align: center;
+  }
 }
 
 .fetch {
   font-size: 1.5em;
   strong {
     font-weight: 500;
+  }
+
+  @media screen and (max-width: 934px) {
+    text-align: center;
+    font-size: 1em;
   }
 }
 
